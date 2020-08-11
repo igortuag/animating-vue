@@ -8,7 +8,6 @@
 
 <script>
 import gsap from 'gsap'
-
 export default {
   data() {
     return {
@@ -27,7 +26,7 @@ export default {
   },
   methods: {
     randomNumber() {
-      this.number = Math.floor(Math.random() * 800)
+      this.number = Math.floor(Math.random() * (800 - 0))
     }
   },
   created() {
