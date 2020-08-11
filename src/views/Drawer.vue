@@ -23,7 +23,6 @@
 
 <script>
 import Velocity from 'velocity-animate'
-
 export default {
   data() {
     return {
@@ -39,14 +38,14 @@ export default {
       Velocity(
         el,
         { opacity: 1, width: '12em' },
-        { duration: 1000, easing: [100, 5], complite: done }
+        { duration: 1000, easing: [100, 5], complete: done }
       )
     },
     leave(el, done) {
       Velocity(
         el,
         { opacity: 0, width: '0em' },
-        { duration: 500, easing: 'easeInCubic', complite: done }
+        { duration: 500, easing: 'easeInCubic', complete: done }
       )
     }
   }

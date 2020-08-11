@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Drawer from './views/Drawer.vue'
+import Modal from './views/Modal.vue'
 
 Vue.use(Router)
 
@@ -11,22 +10,37 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'modal',
+      component: Modal
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: () => import(/* webpackChunkName: "list" */ './views/List.vue')
     },
     {
       path: '/drawer',
       name: 'drawer',
-      component: Drawer
+      component: () =>
+        import(/* webpackChunkName: "list" */ './views/Drawer.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      path: '/cards',
+      name: 'cards',
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue')
+        import(/* webpackChunkName: "cards" */ './views/Cards.vue')
+    },
+    {
+      path: '/simple',
+      name: 'simple',
+      component: () =>
+        import(/* webpackChunkName: "simple" */ './views/Simple.vue')
+    },
+    {
+      path: '/stagger',
+      name: 'stagger',
+      component: () =>
+        import(/* webpackChunkName: "stagger" */ './views/Stagger.vue')
     }
   ]
 })
