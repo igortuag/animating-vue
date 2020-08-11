@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
+      <router-link to="/drawer">Drawer</router-link> |
       <router-link to="/about">List</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
@@ -20,16 +21,16 @@
 }
 
 button {
-  width: 5em;
-  height: 2em;
-  margin: 0.5em;
-  border-radius: 5px;
-  background: linear-gradient(to right, #16c0b0, #84cf6a);
   font-size: 1em;
-  color: white;
   border: none;
   outline: none;
   cursor: pointer;
+
+  height: 2.2em;
+  margin: 0.5em;
+  border-radius: 0.3em;
+  background: linear-gradient(to right, #16c0b0, #84cf6a);
+  color: white;
 }
 
 #nav {
